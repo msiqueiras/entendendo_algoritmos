@@ -12,8 +12,8 @@ O livro é organizado em 11 capítulos ilustrados com alguns exercícios teóric
 
 Buscas binárias em geral são muito interessantes de serem utilizadas, porém só funcionam se a estrutura de dados estiver ordenada. Além disso, tentei induzir qual era a equação geral do número de etapas que uma pesquisa binária teria a partir do número de elementos da estrutura.
 
- E = 2^p --> p = log(2)E 
- 
+ E = 2^p --> p = log(2)E
+
  (Log de E na base 2, sendo E o número de elementos e P a quantidade de etapas).
 
 Além disso, entendi que o desempenho de algoritmos não é necessariamente medido por tempo de execução, e sim sobre o número de etapas necessárias para a execução, com o Big O, que leva em conta a pior caso do algoritmo (Confesso que achava que era o caso médio)
@@ -40,7 +40,7 @@ Pilhas são baseadas no conceito de last in first out (LIFO - último a entrar �
 
 ### Capítulo 4 - Quicksort
 
-O capítulo 4 complementa muito o capítulo 3, mostrando sobre a perspectiva da técnica de dividir para conquistar na hora de realizar alguma recursividade, pois a divisão é a dita procura pelo caso-base. 
+O capítulo 4 complementa muito o capítulo 3, mostrando sobre a perspectiva da técnica de dividir para conquistar na hora de realizar alguma recursividade, pois a divisão é a dita procura pelo caso-base.
 
 Além disso, nos é mostrado um pouco sobre o algoritmo de ordenação quicksort, que é uma forma de dividir para conquistar de ordenação por meio de pivôs.
 
@@ -55,3 +55,10 @@ Colisões são um problema dentro de tabelas hash quando precisamos alocar chave
 As tabelas hash podem ser tão velozes na procura de elementos quanto arrays, e tão velozes na inserção e remoção de itens. Uma boa função hash aloca os valores no array de modo simétrico.
 
 O python possui uma estrutura de tabela hash, que é o dicionário. Tabelas hash são muito utilizadas para mapear algum iteme com relação a outro, para filtrar duplicatas de dados dentro da estrutura e para fazer caching.
+
+### Capítulo 6 - Pesquisa em Largura
+
+O capítulo 6 introduz o conceito de grafos, que são conjuntos de relações entre elementos, individuais ou outros conjuntos (vértices). Em grafos, é preferível procurar sempre o menor caminho possível entre os vértices. O algoritmo que resolve problemas de menor caminho possível se chama busca em largura.
+Ainda sobre somente grafos, é importante ressaltar o conceito de árvores, que são grafos acíclicos e conexos.
+
+Sobre o algoritmo de pesquisa em largura, que se baseia na estrutura de dados de Fila (FIFO - first in first out), precisamos sempre verificar se existe caminhos do vértice A até o vértice B e qual é(são) o caminho mínimo do vértice A ao B. Esse algoritmo de baseia em filas e hierarquia entre a pesquisa, sempre verificando em camadas quais outros vizinhos podem ser o elemento pesquisado antes de procurar nos vizinhos dos vizinhos, a pesquisa sempre se irradia para outros vértices. Nesse algoritmo, utilizamos tabelas hash para se verificar as relações, já que podemos evitar o problema de ordenações (pois tabelas hash não são ordenadas) entre quem vamos enfilerar ou desinfilerar os elementos.
